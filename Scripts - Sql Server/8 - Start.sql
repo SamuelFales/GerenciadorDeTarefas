@@ -1,3 +1,4 @@
+use TaskManager
 
 insert into TB_TaskStatus
 select 'pendente'
