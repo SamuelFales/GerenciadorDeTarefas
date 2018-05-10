@@ -1,0 +1,28 @@
+USE [TaskManager]
+GO
+
+/****** Object:  Table [dbo].[TB_Roles]    Script Date: 02/05/2018 09:03:28 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[TB_Roles](
+	[RoleId] [smallint] NOT NULL,
+	[RoleName] [varchar](50) NOT NULL,
+	[RoleDescription] [varchar](255) NOT NULL,
+ CONSTRAINT [PK_Roles] PRIMARY KEY CLUSTERED 
+(
+	[RoleId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+

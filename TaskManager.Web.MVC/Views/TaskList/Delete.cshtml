@@ -1,0 +1,65 @@
+﻿@model TaskManager.Web.MVC.ViewModel.TaskListViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Deletar</h2>
+
+<div>
+    <h4>Tarefas pré-requisitos e dependentes.</h4>
+    <hr />
+
+
+    @if (TempData["success"] != null) { 
+    <div>
+        @Html.Encode(TempData["success"])
+     </div>
+     }
+
+            <dl class="dl-horizontal">
+                <dt>
+                    Tarefa Principal
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TB_Task.description)
+                </dd>
+            
+    <hr />
+                 <dt>
+                    Tarefa associada
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TB_Task1.description)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.requeriment)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.requeriment)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.dependency)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.dependency)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                    @Html.ActionLink("<< Voltar", "Index", new { id = ViewBag.mainTaskID })
+                </div>
+            }
+        </div>

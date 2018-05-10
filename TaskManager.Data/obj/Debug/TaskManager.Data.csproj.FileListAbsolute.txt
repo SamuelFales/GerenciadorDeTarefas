@@ -1,0 +1,20 @@
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Data\bin\Debug\TaskManager.Data.dll.config
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Data\bin\Debug\TaskManager.Data.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Data\bin\Debug\TaskManager.Data.pdb
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Data\bin\Debug\EntityFramework.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Data\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Data\bin\Debug\EntityFramework.xml
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Data\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Data\obj\Debug\TaskManager.Data.csprojResolveAssemblyReference.cache
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Data\obj\Debug\TaskManager.Data.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Data\obj\Debug\TaskManager.Data.pdb
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Data\bin\Debug\TaskManager.Data.dll.config
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Data\bin\Debug\TaskManager.Data.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Data\bin\Debug\TaskManager.Data.pdb
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Data\bin\Debug\EntityFramework.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Data\bin\Debug\EntityFramework.xml
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Data\obj\Debug\TaskManager.Data.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Data\obj\Debug\TaskManager.Data.pdb
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Data\obj\Debug\TaskManager.Data.csprojResolveAssemblyReference.cache

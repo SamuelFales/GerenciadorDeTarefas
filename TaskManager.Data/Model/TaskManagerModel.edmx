@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TaskManagerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TB_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="smallint" Nullable="false" />
+          <Property Name="RoleName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="RoleDescription" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Task">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="description" Type="nvarchar(max)" />
+          <Property Name="statusID" Type="int" />
+          <Property Name="userID" Type="int" />
+          <Property Name="date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TB_TaskList">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="mainTaskID" Type="int" />
+          <Property Name="taskID" Type="int" />
+          <Property Name="requeriment" Type="bit" />
+          <Property Name="dependency" Type="bit" />
+        </EntityType>
+        <EntityType Name="TB_TaskStatus">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="status" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TB_User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="100" />
+          <Property Name="email" Type="nchar" MaxLength="50" />
+          <Property Name="password" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TB_UserRoles">
+          <Key>
+            <PropertyRef Name="UserRoleId" />
+          </Key>
+          <Property Name="UserRoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="RoleId" Type="smallint" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_TB_Task_TB_TaskStatus">
+          <End Role="TB_TaskStatus" Type="Self.TB_TaskStatus" Multiplicity="0..1" />
+          <End Role="TB_Task" Type="Self.TB_Task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_TaskStatus">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TB_Task">
+              <PropertyRef Name="statusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_Task_TB_User">
+          <End Role="TB_User" Type="Self.TB_User" Multiplicity="0..1" />
+          <End Role="TB_Task" Type="Self.TB_Task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TB_Task">
+              <PropertyRef Name="userID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_TaskList_TB_Task">
+          <End Role="TB_Task" Type="Self.TB_Task" Multiplicity="0..1" />
+          <End Role="TB_TaskList" Type="Self.TB_TaskList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Task">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TB_TaskList">
+              <PropertyRef Name="mainTaskID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_TaskList_TB_Task1">
+          <End Role="TB_Task" Type="Self.TB_Task" Multiplicity="0..1" />
+          <End Role="TB_TaskList" Type="Self.TB_TaskList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Task">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TB_TaskList">
+              <PropertyRef Name="taskID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRoles_Roles">
+          <End Role="TB_Roles" Type="Self.TB_Roles" Multiplicity="1" />
+          <End Role="TB_UserRoles" Type="Self.TB_UserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Roles">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="TB_UserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRoles_Users">
+          <End Role="TB_User" Type="Self.TB_User" Multiplicity="1" />
+          <End Role="TB_UserRoles" Type="Self.TB_UserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TB_UserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TaskManagerModelStoreContainer">
+          <EntitySet Name="TB_Roles" EntityType="Self.TB_Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Task" EntityType="Self.TB_Task" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_TaskList" EntityType="Self.TB_TaskList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_TaskStatus" EntityType="Self.TB_TaskStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_User" EntityType="Self.TB_User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_UserRoles" EntityType="Self.TB_UserRoles" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TB_Task_TB_TaskStatus" Association="Self.FK_TB_Task_TB_TaskStatus">
+            <End Role="TB_TaskStatus" EntitySet="TB_TaskStatus" />
+            <End Role="TB_Task" EntitySet="TB_Task" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_Task_TB_User" Association="Self.FK_TB_Task_TB_User">
+            <End Role="TB_User" EntitySet="TB_User" />
+            <End Role="TB_Task" EntitySet="TB_Task" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_TaskList_TB_Task" Association="Self.FK_TB_TaskList_TB_Task">
+            <End Role="TB_Task" EntitySet="TB_Task" />
+            <End Role="TB_TaskList" EntitySet="TB_TaskList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_TaskList_TB_Task1" Association="Self.FK_TB_TaskList_TB_Task1">
+            <End Role="TB_Task" EntitySet="TB_Task" />
+            <End Role="TB_TaskList" EntitySet="TB_TaskList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRoles_Roles" Association="Self.FK_UserRoles_Roles">
+            <End Role="TB_Roles" EntitySet="TB_Roles" />
+            <End Role="TB_UserRoles" EntitySet="TB_UserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRoles_Users" Association="Self.FK_UserRoles_Users">
+            <End Role="TB_User" EntitySet="TB_User" />
+            <End Role="TB_UserRoles" EntitySet="TB_UserRoles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TaskManagerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TaskManagerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TB_Roles" EntityType="TaskManagerModel.TB_Roles" />
+          <EntitySet Name="TB_Task" EntityType="TaskManagerModel.TB_Task" />
+          <EntitySet Name="TB_TaskList" EntityType="TaskManagerModel.TB_TaskList" />
+          <EntitySet Name="TB_TaskStatus" EntityType="TaskManagerModel.TB_TaskStatus" />
+          <EntitySet Name="TB_User" EntityType="TaskManagerModel.TB_User" />
+          <EntitySet Name="TB_UserRoles" EntityType="TaskManagerModel.TB_UserRoles" />
+          <AssociationSet Name="FK_UserRoles_Roles" Association="TaskManagerModel.FK_UserRoles_Roles">
+            <End Role="TB_Roles" EntitySet="TB_Roles" />
+            <End Role="TB_UserRoles" EntitySet="TB_UserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_Task_TB_TaskStatus" Association="TaskManagerModel.FK_TB_Task_TB_TaskStatus">
+            <End Role="TB_TaskStatus" EntitySet="TB_TaskStatus" />
+            <End Role="TB_Task" EntitySet="TB_Task" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_Task_TB_User" Association="TaskManagerModel.FK_TB_Task_TB_User">
+            <End Role="TB_User" EntitySet="TB_User" />
+            <End Role="TB_Task" EntitySet="TB_Task" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_TaskList_TB_Task" Association="TaskManagerModel.FK_TB_TaskList_TB_Task">
+            <End Role="TB_Task" EntitySet="TB_Task" />
+            <End Role="TB_TaskList" EntitySet="TB_TaskList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_TaskList_TB_Task1" Association="TaskManagerModel.FK_TB_TaskList_TB_Task1">
+            <End Role="TB_Task" EntitySet="TB_Task" />
+            <End Role="TB_TaskList" EntitySet="TB_TaskList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRoles_Users" Association="TaskManagerModel.FK_UserRoles_Users">
+            <End Role="TB_User" EntitySet="TB_User" />
+            <End Role="TB_UserRoles" EntitySet="TB_UserRoles" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="TB_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="Int16" Nullable="false" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RoleDescription" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TB_UserRoles" Relationship="TaskManagerModel.FK_UserRoles_Roles" FromRole="TB_Roles" ToRole="TB_UserRoles" />
+        </EntityType>
+        <EntityType Name="TB_Task">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="statusID" Type="Int32" />
+          <Property Name="userID" Type="Int32" />
+          <Property Name="date" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="TB_TaskStatus" Relationship="TaskManagerModel.FK_TB_Task_TB_TaskStatus" FromRole="TB_Task" ToRole="TB_TaskStatus" />
+          <NavigationProperty Name="TB_User" Relationship="TaskManagerModel.FK_TB_Task_TB_User" FromRole="TB_Task" ToRole="TB_User" />
+          <NavigationProperty Name="TB_TaskList" Relationship="TaskManagerModel.FK_TB_TaskList_TB_Task" FromRole="TB_Task" ToRole="TB_TaskList" />
+          <NavigationProperty Name="TB_TaskList1" Relationship="TaskManagerModel.FK_TB_TaskList_TB_Task1" FromRole="TB_Task" ToRole="TB_TaskList" />
+        </EntityType>
+        <EntityType Name="TB_TaskList">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="mainTaskID" Type="Int32" />
+          <Property Name="taskID" Type="Int32" />
+          <Property Name="requeriment" Type="Boolean" />
+          <Property Name="dependency" Type="Boolean" />
+          <NavigationProperty Name="TB_Task" Relationship="TaskManagerModel.FK_TB_TaskList_TB_Task" FromRole="TB_TaskList" ToRole="TB_Task" />
+          <NavigationProperty Name="TB_Task1" Relationship="TaskManagerModel.FK_TB_TaskList_TB_Task1" FromRole="TB_TaskList" ToRole="TB_Task" />
+        </EntityType>
+        <EntityType Name="TB_TaskStatus">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="status" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="TB_Task" Relationship="TaskManagerModel.FK_TB_Task_TB_TaskStatus" FromRole="TB_TaskStatus" ToRole="TB_Task" />
+        </EntityType>
+        <EntityType Name="TB_User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TB_Task" Relationship="TaskManagerModel.FK_TB_Task_TB_User" FromRole="TB_User" ToRole="TB_Task" />
+          <NavigationProperty Name="TB_UserRoles" Relationship="TaskManagerModel.FK_UserRoles_Users" FromRole="TB_User" ToRole="TB_UserRoles" />
+        </EntityType>
+        <EntityType Name="TB_UserRoles">
+          <Key>
+            <PropertyRef Name="UserRoleId" />
+          </Key>
+          <Property Name="UserRoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="RoleId" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="TB_Roles" Relationship="TaskManagerModel.FK_UserRoles_Roles" FromRole="TB_UserRoles" ToRole="TB_Roles" />
+          <NavigationProperty Name="TB_User" Relationship="TaskManagerModel.FK_UserRoles_Users" FromRole="TB_UserRoles" ToRole="TB_User" />
+        </EntityType>
+        <Association Name="FK_UserRoles_Roles">
+          <End Type="TaskManagerModel.TB_Roles" Role="TB_Roles" Multiplicity="1" />
+          <End Type="TaskManagerModel.TB_UserRoles" Role="TB_UserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Roles">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="TB_UserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_Task_TB_TaskStatus">
+          <End Type="TaskManagerModel.TB_TaskStatus" Role="TB_TaskStatus" Multiplicity="0..1" />
+          <End Type="TaskManagerModel.TB_Task" Role="TB_Task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_TaskStatus">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TB_Task">
+              <PropertyRef Name="statusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_Task_TB_User">
+          <End Type="TaskManagerModel.TB_User" Role="TB_User" Multiplicity="0..1" />
+          <End Type="TaskManagerModel.TB_Task" Role="TB_Task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TB_Task">
+              <PropertyRef Name="userID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_TaskList_TB_Task">
+          <End Type="TaskManagerModel.TB_Task" Role="TB_Task" Multiplicity="0..1" />
+          <End Type="TaskManagerModel.TB_TaskList" Role="TB_TaskList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Task">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TB_TaskList">
+              <PropertyRef Name="mainTaskID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_TaskList_TB_Task1">
+          <End Type="TaskManagerModel.TB_Task" Role="TB_Task" Multiplicity="0..1" />
+          <End Type="TaskManagerModel.TB_TaskList" Role="TB_TaskList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Task">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TB_TaskList">
+              <PropertyRef Name="taskID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRoles_Users">
+          <End Type="TaskManagerModel.TB_User" Role="TB_User" Multiplicity="1" />
+          <End Type="TaskManagerModel.TB_UserRoles" Role="TB_UserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TB_UserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TaskManagerModelStoreContainer" CdmEntityContainer="TaskManagerEntities">
+          <EntitySetMapping Name="TB_Roles">
+            <EntityTypeMapping TypeName="TaskManagerModel.TB_Roles">
+              <MappingFragment StoreEntitySet="TB_Roles">
+                <ScalarProperty Name="RoleDescription" ColumnName="RoleDescription" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Task">
+            <EntityTypeMapping TypeName="TaskManagerModel.TB_Task">
+              <MappingFragment StoreEntitySet="TB_Task">
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="statusID" ColumnName="statusID" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_TaskList">
+            <EntityTypeMapping TypeName="TaskManagerModel.TB_TaskList">
+              <MappingFragment StoreEntitySet="TB_TaskList">
+                <ScalarProperty Name="dependency" ColumnName="dependency" />
+                <ScalarProperty Name="requeriment" ColumnName="requeriment" />
+                <ScalarProperty Name="taskID" ColumnName="taskID" />
+                <ScalarProperty Name="mainTaskID" ColumnName="mainTaskID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_TaskStatus">
+            <EntityTypeMapping TypeName="TaskManagerModel.TB_TaskStatus">
+              <MappingFragment StoreEntitySet="TB_TaskStatus">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_User">
+            <EntityTypeMapping TypeName="TaskManagerModel.TB_User">
+              <MappingFragment StoreEntitySet="TB_User">
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_UserRoles">
+            <EntityTypeMapping TypeName="TaskManagerModel.TB_UserRoles">
+              <MappingFragment StoreEntitySet="TB_UserRoles">
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserRoleId" ColumnName="UserRoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

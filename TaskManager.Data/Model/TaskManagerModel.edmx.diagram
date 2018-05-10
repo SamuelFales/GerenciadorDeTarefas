@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="688763debf0e4d3182e73bbc06f70f7b" Name="Diagram1">
+        <EntityTypeShape EntityType="TaskManagerModel.TB_Roles" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TaskManagerModel.TB_Task" Width="1.5" PointX="6" PointY="3.25" />
+        <EntityTypeShape EntityType="TaskManagerModel.TB_TaskList" Width="1.5" PointX="8.25" PointY="3.5" />
+        <EntityTypeShape EntityType="TaskManagerModel.TB_TaskStatus" Width="1.5" PointX="3.75" PointY="0.875" />
+        <EntityTypeShape EntityType="TaskManagerModel.TB_User" Width="1.5" PointX="0.75" PointY="3.5" />
+        <EntityTypeShape EntityType="TaskManagerModel.TB_UserRoles" Width="1.5" PointX="3" PointY="3.625" />
+        <AssociationConnector Association="TaskManagerModel.FK_UserRoles_Roles" />
+        <AssociationConnector Association="TaskManagerModel.FK_TB_Task_TB_TaskStatus" />
+        <AssociationConnector Association="TaskManagerModel.FK_TB_Task_TB_User" />
+        <AssociationConnector Association="TaskManagerModel.FK_TB_TaskList_TB_Task" />
+        <AssociationConnector Association="TaskManagerModel.FK_TB_TaskList_TB_Task1" />
+        <AssociationConnector Association="TaskManagerModel.FK_UserRoles_Users" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<TaskManager.Web.MVC.ViewModel.TaskListViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tarefas pré-requisitos e dependentes</h2>
+
+<p>
+    @Html.ActionLink("Criar nova", "Create", new { id = ViewBag.id })
+</p>
+<table class="table">
+    <tr>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.TB_Task1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TB_Task1.TB_TaskStatus.status)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.taskID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.requeriment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dependency)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(model => item.TB_Task1.description)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.TB_Task1.TB_TaskStatus.status)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.taskID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.requeriment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dependency)
+        </td>
+        <td>
+            @Html.ActionLink("Deletar", "Delete", new { id = item.ID })
+        </td>
+    </tr>
+}
+   
+</table>
+
+<div>
+    @Html.ActionLink("<< Voltar", "Index", "Task")
+</div>

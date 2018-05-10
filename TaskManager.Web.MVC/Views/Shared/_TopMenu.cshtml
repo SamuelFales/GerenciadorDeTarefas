@@ -1,0 +1,15 @@
+﻿
+<nav>
+    <div class="container-fluid">
+        <ul class="nav nav-tabs">
+
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                 @if (User.IsInRole("Master"))
+                 {
+                    <li>@Html.ActionLink("Usuários", "Index", "User")</li>
+                 }
+                 <li>@Html.ActionLink("Tarefas", "Index", "Task")</li>
+           
+        </ul>
+    </div>
+</nav>

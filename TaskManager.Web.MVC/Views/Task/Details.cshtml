@@ -1,0 +1,112 @@
+﻿@model TaskManager.Web.MVC.ViewModel.TaskViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Tarefa</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TB_User.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TB_User.name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TB_TaskStatus.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TB_TaskStatus.status)
+        </dd>
+
+    </dl>
+</div>
+<div>
+   
+    <hr />
+     <p>
+        @Html.ActionLink("Create New", "Create", "TaskList", new { id = Model.ID },null)
+    </p>
+    <h4>Requisitos e dependências:</h4>
+    <table>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TB_TaskStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TB_User)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayName("Pré-requisito")
+            </th>
+            <th>
+                @Html.DisplayName("Dependência")
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.TB_TaskList)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TB_Task1.description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TB_Task1.TB_TaskStatus.status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TB_Task1.TB_User.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TB_Task1.date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.requeriment)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dependency)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.TB_Task1.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.TB_Task1.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.TB_Task1.ID })
+                </td>
+
+            </tr>
+        }
+
+    </table>
+    <hr />
+
+
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TaskManagerModelStoreContainer" CdmEntityContainer="TaskManagerEntities">
+    <EntitySetMapping Name="TB_Roles">
+      <EntityTypeMapping TypeName="TaskManagerModel.TB_Roles">
+        <MappingFragment StoreEntitySet="TB_Roles">
+          <ScalarProperty Name="RoleDescription" ColumnName="RoleDescription" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Task">
+      <EntityTypeMapping TypeName="TaskManagerModel.TB_Task">
+        <MappingFragment StoreEntitySet="TB_Task">
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="statusID" ColumnName="statusID" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TaskList">
+      <EntityTypeMapping TypeName="TaskManagerModel.TB_TaskList">
+        <MappingFragment StoreEntitySet="TB_TaskList">
+          <ScalarProperty Name="dependency" ColumnName="dependency" />
+          <ScalarProperty Name="requeriment" ColumnName="requeriment" />
+          <ScalarProperty Name="taskID" ColumnName="taskID" />
+          <ScalarProperty Name="mainTaskID" ColumnName="mainTaskID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TaskStatus">
+      <EntityTypeMapping TypeName="TaskManagerModel.TB_TaskStatus">
+        <MappingFragment StoreEntitySet="TB_TaskStatus">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_User">
+      <EntityTypeMapping TypeName="TaskManagerModel.TB_User">
+        <MappingFragment StoreEntitySet="TB_User">
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_UserRoles">
+      <EntityTypeMapping TypeName="TaskManagerModel.TB_UserRoles">
+        <MappingFragment StoreEntitySet="TB_UserRoles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserRoleId" ColumnName="UserRoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

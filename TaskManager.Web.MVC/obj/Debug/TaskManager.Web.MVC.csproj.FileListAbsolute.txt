@@ -1,0 +1,98 @@
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\csc.exe
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\System.Collections.Immutable.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\vbc.exe
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\VBCSCompiler.exe
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\VBCSCompiler.exe.config
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\TaskManager.Web.MVC.dll.config
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\TaskManager.Web.MVC.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\TaskManager.Web.MVC.pdb
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\AutoMapper.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\EntityFramework.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\EntityFramework.SqlServer.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\Microsoft.Web.Infrastructure.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\SimpleInjector.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\SimpleInjector.Integration.Web.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\SimpleInjector.Integration.Web.Mvc.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Helpers.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Mvc.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Razor.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Webpages.Deployment.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Webpages.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Webpages.Razor.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\TaskManager.Core.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\TaskManager.Data.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\TaskManager.Core.pdb
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\TaskManager.Data.pdb
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\AutoMapper.xml
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\EntityFramework.xml
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\EntityFramework.SqlServer.xml
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\SimpleInjector.xml
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\SimpleInjector.Integration.Web.xml
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\SimpleInjector.Integration.Web.Mvc.xml
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Razor.xml
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Webpages.xml
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Webpages.Deployment.xml
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Webpages.Razor.xml
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Helpers.xml
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Mvc.xml
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\obj\Debug\TaskManager.Web.MVC.csprojResolveAssemblyReference.cache
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\obj\Debug\TaskManager.Web.MVC.dll
+c:\users\samuel\documents\visual studio 2015\Projects\TesteGerenciadorTarefas\TaskManager.Web.MVC\obj\Debug\TaskManager.Web.MVC.pdb
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\csc.exe
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\vbc.exe
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\VBCSCompiler.exe
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\TaskManager.Web.MVC.dll.config
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\TaskManager.Web.MVC.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\TaskManager.Web.MVC.pdb
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\AutoMapper.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\EntityFramework.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\EntityFramework.SqlServer.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\SimpleInjector.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\SimpleInjector.Integration.Web.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\SimpleInjector.Integration.Web.Mvc.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Helpers.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Mvc.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Razor.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Webpages.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Webpages.Razor.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\TaskManager.Core.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\TaskManager.Data.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\TaskManager.Core.pdb
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\TaskManager.Data.pdb
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\AutoMapper.xml
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\EntityFramework.xml
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\EntityFramework.SqlServer.xml
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\SimpleInjector.xml
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\SimpleInjector.Integration.Web.xml
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\SimpleInjector.Integration.Web.Mvc.xml
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Razor.xml
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Webpages.xml
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Webpages.Razor.xml
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Helpers.xml
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\bin\System.Web.Mvc.xml
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\obj\Debug\TaskManager.Web.MVC.csprojResolveAssemblyReference.cache
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\obj\Debug\TaskManager.Web.MVC.dll
+C:\Users\Samuel\OneDrive\PROJETOS\TesteGerenciadorTarefas\TaskManager.Web.MVC\obj\Debug\TaskManager.Web.MVC.pdb

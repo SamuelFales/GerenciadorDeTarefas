@@ -1,0 +1,38 @@
+USE [TaskManager]
+GO
+
+/****** Object:  Table [dbo].[TB_Task]    Script Date: 02/05/2018 09:04:46 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[TB_Task](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[description] [nvarchar](max) NULL,
+	[statusID] [int] NULL,
+	[userID] [int] NULL,
+	[date] [datetime] NULL,
+ CONSTRAINT [PK_TB_Task] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[TB_Task]  WITH CHECK ADD  CONSTRAINT [FK_TB_Task_TB_TaskStatus] FOREIGN KEY([statusID])
+REFERENCES [dbo].[TB_TaskStatus] ([ID])
+GO
+
+ALTER TABLE [dbo].[TB_Task] CHECK CONSTRAINT [FK_TB_Task_TB_TaskStatus]
+GO
+
+ALTER TABLE [dbo].[TB_Task]  WITH CHECK ADD  CONSTRAINT [FK_TB_Task_TB_User] FOREIGN KEY([userID])
+REFERENCES [dbo].[TB_User] ([ID])
+GO
+
+ALTER TABLE [dbo].[TB_Task] CHECK CONSTRAINT [FK_TB_Task_TB_User]
+GO
+
